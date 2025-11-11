@@ -3,6 +3,10 @@
 
 <head>
   <meta charset="utf-8" />
+
+  <!-- Link to your CSS file -->
+  <link rel="stylesheet" href="style.css">
+
   <meta name="viewport" content="width=device-width, user-scalable=no" />
   <meta name="description" content="Meg Miller, writer & editor">
   <meta name="author" content="Meg Miller">
