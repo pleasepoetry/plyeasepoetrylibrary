@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <meta name="description" content="Meg Miller, writer & editor">
+  <meta name="author" content="Meg Miller">
+  <title>Meg Miller</title>
+  <link rel="icon" href="https://megmiller.world/assets/images/favicon.ico" type="image/x-icon" />
+  <link href="https://megmiller.world/assets/css/index.css?333" rel="stylesheet">
+<link href="https://megmiller.world/assets/css/templates/home.css" rel="stylesheet">  <link href="https://megmiller.world/assets/css/tablesorter.css" rel="stylesheet">
+<link href="https://megmiller.world/assets/css/templates/home.css" rel="stylesheet"></head>
+<body>
+
+<div class="everything">
+  <div class="inside-everything">
+
+  <div class="box square image">
+         <img src="https://megmiller.world/media/pages/home/aa89712ee9-1719596515/magnolia-880x.png">
+       <img src="https://megmiller.world/media/pages/home/94a574b6a2-1719596440/richmond-880x.png">
+       <img src="https://megmiller.world/media/pages/home/3a6f5bc617-1719596264/meg-880x.png">
+    </div>
+
+  <div class="box meta home visible">
+    <p>meg miller</p>
+<p>writer &amp; editor</p>
+<p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f79a9a9e9b9bc7c1b7909a969e9bd994989a">[email&#160;protected]</a></p>    <div class="spacer"></div>
+  </div>
+
+  <div class="mobile-nav">
+
+    <a href="https://megmiller.world/writing" class="box writing">
+      <div class="inside">Writing</div>
+    </a>
+
+    <a href="https://megmiller.world/editing" class="box editing">
+      <div class="inside">Editing</div>
+    </a>
+
+    <a href="https://megmiller.world/talks-lectures-workshops" class="box talks">
+      <div class="inside">Teaching, Talks</div>
+    </a>
+
+    <a href="https://megmiller.world/biography" class="box biography">
+      biography
+    </a>
+
+    <a href="https://megmiller.world/newsletter" class="box newsletter">
+      newsletter
+    </a>
+
+    <a href="https://megmiller.world/works" class="box expert">
+      expert mode
+    </a>
+
+    <div class="box spacer"></div>
+
+  </div>
+
+</div>
+</div>
+
+<footer></footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://megmiller.world/assets/js/jquery.min.js"></script>  <script src="https://megmiller.world/assets/js/jquery.tablesorter.js"></script>  <script src="https://megmiller.world/assets/js/jquery.tablesorter.staticrow.js"></script>  <script src="https://megmiller.world/assets/js/index.js"></script>
+  <script>
+
+  /* THEMES & SIZES INITIALIATION */
+
+  function testStorage(){
+
+  	function setTheme(theme){
+  		if(current_theme == theme){
+  			$('body').removeClass('one');
+  			$('body').removeClass('two');
+  			$('body').removeClass('three');
+  			$('body').addClass(theme);
+  		}
+  	}
+
+    var current_theme = localStorage.getItem('theme');
+    console.log("The current theme is: " + current_theme);
+    setTheme(current_theme);
+
+  }
+
+  testStorage();
+
+  /* MORE THEMES */
+
+  if (localStorage.getItem('theme') === null) {
+    console.log("There is no local storage set for theme.");
+    $('body').removeClass('two');
+    $('body').removeClass('three');
+    $('body').addClass('one');
+    var current_theme = 'one';
+    console.log("The current theme is: " + current_theme);
+  }
+
+  else {
+    var current_theme = localStorage.getItem('theme');
+  }
+
+  $(document).ready(function(){
+
+    var images = $('.box.square.image img');
+    var current = 0;
+    var count = $('.box.square.image img').length;
+
+    var current_number;
+
+    if (current_theme == 'one') { current_number = 0; }
+    if (current_theme == 'two') { current_number = 1; }
+    if (current_theme == 'three') { current_number = 2; }
+
+    $(images[current_number]).show();
+
+    current = current_number;
+
+    $('.box.square.image').click(function(){
+
+      $(images).hide();
+      current++;
+      if(current >= count) {
+        current = 0;
+      }
+      console.log(current);
+      $(images[current]).show();
+
+      var number;
+      if(current == 0) {
+        number = 'one';
+      }
+      if(current == 1){
+        number = 'two';
+      }
+      if(current == 2){
+        number = 'three';
+      }
+      localStorage.setItem('theme', number);
+      testStorage();
+    });
+
+    var thumbs = $('a.return .square img');
+    $(thumbs).hide();
+    $(thumbs[current]).show();
+
+  });
+
+  </script>
+  </body>
+</html>
