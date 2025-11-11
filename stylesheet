@@ -1,0 +1,187 @@
+/* ================================
+   Font Imports - Helvetica Neue Variations
+   ================================ */
+
+@font-face {
+    font-family: 'helveticaneuebold';
+    src: url('helvetica_neu_bold-webfont.woff2') format('woff2'),
+         url('helvetica_neu_bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'helveticaneuemedium';
+    src: url('helveticaneue_medium-webfont.woff2') format('woff2'),
+         url('helveticaneue_medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'helveticaneuelight';
+    src: url('helveticaneue_light-webfont.woff2') format('woff2'),
+         url('helveticaneue_light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+
+}
+.gradient-link, a {
+    font-size: inherit ! important;
+    font-weight: inherit ! important;
+}
+
+
+/* ================================
+   General Typography & Global Styles
+   ================================ */
+
+body {
+    color: black;
+    background-color: #dcdcdc;
+    font-family: 'helveticaneuemedium', Helvetica, Arial, sans-serif;
+    font-size: 1rem; /* Base font size */
+}
+
+/* ================================
+   Headings (Now Responsive)
+   ================================ */
+
+h1 {
+    font-size: clamp(24px, 3vw, 36px); /* Min 24px, scales with vw, max 36px */
+    font-family: 'helveticaneuebold';
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: clamp(18px, 2.2vw, 30px); /* Min 18px, scales with vw, max 30px */
+    font-family: 'helveticaneuemedium';
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+
+h3 {
+   font-size: clamp(18px, 2.2vw, 24px); /* Min 18px, scales with vw, max 24px */
+    font-size: 1.8vw;
+    font-family: 'helveticaneuelight';
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+/* ================================
+   Body Text & Bio Text (Fixed Line Height)
+   ================================ */
+
+.text, .bio-text {
+    font-size: 1.2rem !important; /* Ensures readability across all screen sizes */
+    font-family: 'helveticaneuemedium', Helvetica, sans-serif;
+}
+
+.gradient-link, a {
+    font-size: inherit !important; /* Ensures links match surrounding text */
+    font-weight: inherit !important;
+    text-decoration: none;
+}
+
+/* Mobile-Specific Fixes */
+@media (max-width: 768px) { /* Tablets */
+    .text, .bio-text {
+        font-size: 1rem !important;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) { /* Mobile Phones */
+    .text, .bio-text {
+        font-size: 0.9rem !important;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+}
+
+
+
+/* ================================
+   Hyperlinks & Gradient Links (Same Size as Text)
+   ================================ */
+
+a {
+    text-decoration: none;
+    color: #1883ba;
+}
+
+.gradient-link {
+    font-size: inherit !important; /* Ensures same size as surrounding text */
+    font-weight: inherit !important; /* Matches parent weight */
+    background: linear-gradient(to right, #1561bf 0%, #1561bf 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+}
+
+.gradient-link:hover {
+    font-family: 'helveticaneuemedium';
+    text-decoration: underline;
+}
+
+/* ================================
+   Responsive Adjustments for Mobile
+   ================================ */
+
+.text, .bio-text {
+    font-size: 1.2rem !important; /* Ensures readability across all screen sizes */
+    font-family: 'helveticaneuemedium', Helvetica, Arial, sans-serif;
+}
+
+.gradient-link, a {
+    font-size: inherit !important; /* Ensures links match surrounding text */
+    font-weight: inherit !important;
+    text-decoration: none;
+}
+
+/* Mobile-Specific Fixes */
+@media (max-width: 768px) { /* Tablets */
+    .text, .bio-text {
+        font-size: 1rem !important;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) { /* Mobile Phones */
+    .text, .bio-text {
+        font-size: 0.9rem !important;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+}
