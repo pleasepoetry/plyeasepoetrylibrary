@@ -29,7 +29,4 @@ jobs:
       name: github-pages
     steps:
       - uses: actions/deploy-pages@v4
-      git add .github/workflows/pages.yml
-git commit -m "Add Pages deploy workflow"
-git push
-
+     
